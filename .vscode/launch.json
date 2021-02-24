@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Open weather-widget-main.component.html",
+            "file": "c:\\Users\\Nabarun Choudhury\\angular-weather-widget\\src\\app\\Components\\weather-widget-main\\weather-widget-main.component.html"
+        }
+    ]
+}
