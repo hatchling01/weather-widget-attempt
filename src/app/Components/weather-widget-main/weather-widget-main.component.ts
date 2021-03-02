@@ -31,7 +31,7 @@ export class ForecastWidgetMainComponent implements OnInit {
      }
    
      getForecastData(){
-       fetch('https://api.openweathermap.org/data/2.5/onecall?lat=22.5726&lon=88.3639&exclude=&appid=584bf6b74ec00821b83701b62a0491c0')
+       fetch('https://api.openweathermap.org/data/2.5/onecall?lat=22.7105&lon=88.4659&exclude=&appid=584bf6b74ec00821b83701b62a0491c0')
        .then(response=>response.json())
        .then(data=>{this.setForecastData(data);})
        
@@ -140,12 +140,14 @@ export class ForecastWidgetMainComponent implements OnInit {
 
 
         }
+        
+        console.log("entering", this.ForecastData.daily);
         for(let x=0;x<7;x++)
         {
           var j=0;
            this.array_id.push((this.ForecastData.daily[x].weather[j].icon));
         this.array_url.push(("http://openweathermap.org/img/w/"+this.array_id[x]+".png"));
-        document.getElementById('hello').setAttribute( 'src',this.array_url[j]  );
+        document.getElementById('hello0').setAttribute( 'src',this.array_url[j]  );
         j++;
         document.getElementById('hello1').setAttribute( 'src',this.array_url[j]  );  
         j++;
@@ -176,5 +178,3 @@ export class ForecastWidgetMainComponent implements OnInit {
         
         
      }
-
-

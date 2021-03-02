@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ForecastWidgetMainComponent } from './Components/weather-widget-main/weather-widget-main.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ForecastWidgetMainComponent
+    ForecastWidgetMainComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule
