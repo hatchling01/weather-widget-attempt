@@ -1,14 +1,125 @@
-<div id="divWeatherMain">
-    <div *ngIf="WeatherData.isDay" class="weatherWidgetRow">
-        <i class="fas fa-3x fa-sun sun"></i>
-    </div>
-    <div *ngIf="!WeatherData.isDay" class="weatherWidgetRow">
-        <i class="fas fa-3x fa-moon moon"></i>
-    </div>
 
-    <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{WeatherData.temp_celcius}}°</div>
-    <div class="weatherWidgetRow" style="font-size: 12px;">{{WeatherData.temp_min}}° / {{WeatherData.temp_max}}°</div>
-    <div class="weatherWidgetRow" style="font-size: 12px;">Feels like: {{WeatherData.temp_feels_like}}°</div>
-    <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{WeatherData.name}}</div>
-    <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{WeatherData.main.humidity}}%</div>
+<!--<form   id="form" style="height: 45px;" (ngSubmit)="getPlaceData()">
+    <input placeholder="Enter City" type="text"  id="userInput" style="height: 35px; width: 180px;" name="place" [(ngModel)]="place" />
+    <input style="height:35px ; " type="submit"  />
+</form>-->
+
+<form 
+[formGroup]="cityName"(ngSubmit)="onSubmit()">
+<input class="form-Control" type="text" name="position" id="userInput" formControlName="position"/>
+<button type="submit">Submit</button>
+</form>
+
+<!--<p>{{place}}</p>-->
+
+<div id="toppbar">
+    <div class="col"><img id="hello22" src="" alt="img" style="width: 200px; height:200px ; padding-left:32px;"> </div>
+    <div class="col" style="font-size: 50px;">Current temperature is :{{ForecastData.temp_now}}°C</div>
+    <div class="col" style="font-size: 20px;" >Humidity is :{{ForecastData.humidity}}%</div>
+    <div class="col" style="font-size: 20px;">Wind speed is :{{ForecastData.wind}}km/hr</div>
+    <div class="col" style="font-size: 25px;">{{ForecastData.description}}</div>
 </div>
+
+
+<div class="topnav">
+    
+    
+   <!-- <form id="form" style="height: 50px;" onsubmit="return false;">
+        <input  type="text" id="userInput" />
+        <input style="height:30px ;" type="submit" onclick="othername();" />
+    </form>
+    Take this code to another page
+-->
+
+
+    
+    
+<div id="major" style="display: flex;">
+<div id="divWeatherMain">
+    <img id="hello0" src="" alt="img" style="width:130px; height:130px ; padding-left:22px;">
+    <!--<div *ngIf="!ForecastData.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-sun sun"></i>
+    </div>-->
+
+    
+
+    
+    <div class="weatherWidgetRow" style="font-size: 12px;">Min: {{(this.ForecastData.daily[0].temp.min-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Max:{{(this.ForecastData.daily[0].temp.max-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Today</div>
+
+    
+
+    
+</div>
+
+<div id="divWeatherMain">
+    <img id="hello1" src="" alt="img" style="width:130px; height:130px ; padding-left:22px;">
+
+
+    <div class="weatherWidgetRow" style="font-size: 12px;">Min: {{(this.ForecastData.daily[1].temp.min-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Max:{{(this.ForecastData.daily[1].temp.max-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">{{array_3[1]}}</div>
+
+
+   
+    
+</div>
+<div id="divWeatherMain">
+    <img id="hello2" src="" alt="img" style="width:130px; height:130px ; padding-left:22px;">
+
+
+    <div class="weatherWidgetRow" style="font-size: 12px;">Min: {{(this.ForecastData.daily[2].temp.min-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Max:{{(this.ForecastData.daily[2].temp.max-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">{{array_3[2]}}</div>
+
+   
+    
+</div>
+<div id="divWeatherMain">
+    <img id="hello3" src="" alt="img" style="width:130px; height:130px ; padding-left:22px;">
+
+
+    <div class="weatherWidgetRow" style="font-size: 12px;">Min: {{(this.ForecastData.daily[3].temp.min-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Max:{{(this.ForecastData.daily[3].temp.max-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">{{array_3[3]}}</div>
+
+
+   
+    
+</div>
+<div id="divWeatherMain">
+    <img id="hello4" src="" alt="img" style="width:130px; height:130px ; padding-left:22px;">
+
+
+    <div class="weatherWidgetRow" style="font-size: 12px;">Min: {{(this.ForecastData.daily[4].temp.min-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Max:{{(this.ForecastData.daily[4].temp.max-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">{{array_3[4]}}</div>
+
+   
+    
+</div>
+<div id="divWeatherMain">
+    <img id="hello5" src="" alt="img" style="width:130px; height:130px ; padding-left:22px;">
+
+    <div class="weatherWidgetRow" style="font-size: 12px;">Min: {{(this.ForecastData.daily[5].temp.min-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Max:{{(this.ForecastData.daily[5].temp.max-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">{{array_3[5]}}</div>
+
+   
+    
+</div>
+<div id="divWeatherMain">
+    <img id="hello6" src="" alt="img" style="width:130px; height:130px ; padding-left:22px;">
+
+    <div class="weatherWidgetRow" style="font-size: 12px;">Min: {{(this.ForecastData.daily[6].temp.min-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Max:{{(this.ForecastData.daily[6].temp.max-273).toFixed(0)}}°C</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">{{array_3[6]}}</div>
+
+   
+    
+</div>
+
+
+</div>
+
