@@ -2,6 +2,7 @@ import { getLocaleDayNames } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 //import { User } from '../../user';
+
 //import { timeStamp } from 'console';
 
 @Component({
@@ -13,11 +14,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 
+
 export class ForecastWidgetMainComponent implements OnInit {
   [x: string]: any;
 
   place: string ;
-  
+
+ 
        array_1:any[]=new Array();
        array_3:any[]=new Array();
        array_2:any[]=new Array();
@@ -120,6 +123,13 @@ export class ForecastWidgetMainComponent implements OnInit {
        this.ForecastData.wind = (this.ForecastData.current.wind_speed);
        this.ForecastData.description = (this.ForecastData.current.weather[0].description);
        document.getElementById('hello22').setAttribute( 'src',"http://openweathermap.org/img/w/"+this.ForecastData.current.weather[0].icon+".png"  )
+      // day:String;
+     
+
+     //console.log("data",this.ForecastData)
+  
+
+
        let currentDate = new Date ();
        //var day = currentDate.getDay();
 
@@ -209,6 +219,7 @@ export class ForecastWidgetMainComponent implements OnInit {
         }
         
         console.log("entering", this.ForecastData.daily);
+
         /*for(let x=0;x<7;x++)
         {
           var j=0;
@@ -230,18 +241,19 @@ export class ForecastWidgetMainComponent implements OnInit {
 
         console.log("entering loop");
         document.getElementById('hello6').setAttribute( 'src',"http://openweathermap.org/img/w/"+this.ForecastData.daily[6].weather[0].icon+".png"  );
-
-
-        
+       
 
         
 
+        
 
 
 
-        };
+
         
 
         
         
      }
+    }
+    

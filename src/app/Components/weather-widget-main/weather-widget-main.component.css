@@ -3,8 +3,8 @@
     border-radius: 10px;
     width: 200px;
     height: 240px;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(16, 13, 110));
+    background: rgb(107, 215, 223);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(126, 210, 221));
     color: white;
     font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -89,8 +89,8 @@
     display: block;
     width: fit-content;
     height: fit-content;
-    background: rgb(52, 56, 104);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(16, 13, 110));
+    background: rgb(148, 221, 164);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(146, 204, 177));
     color: white;
     font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
